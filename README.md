@@ -1,6 +1,6 @@
 # dotfiles
 
-Hey wes what settings do you use?
+Forked from [wesbos/dotfiles](https://github.com/wesbos/dotfiles)
 
 These are my config setting for various apps, editors and linters. I'd suggest not copying them directly but referencing what I have and what ones might make sense for you.
 
