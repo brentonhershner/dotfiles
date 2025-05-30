@@ -1,0 +1,53 @@
+{
+  // Place your snippets for typescriptreact here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // same ids are connected.
+  // Reference: https://code.visualstudio.com/docs/editing/userdefinedsnippets
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Console Log JSON": {
+    "prefix": "clj",
+    "body": [
+      "console.log(\"$TM_SELECTED_TEXT$1\", JSON.stringify($TM_SELECTED_TEXT$1, null, 2));$2"
+    ],
+    "description": "Log JSON object to console with indentation"
+  },
+  "JSON stringify": {
+    "prefix": "jsons",
+    "body": [
+      "JSON.stringify($TM_SELECTED_TEXT$1, null, 2)$2",
+    ],
+    "description": "Stringify an object with indentation",
+  },
+  "useEffect": {
+    "prefix": "uef",
+    "body": [
+      "useEffect(() => {",
+      "\t$TM_SELECTED_TEXT$1",
+      "}, [$2]);"
+    ],
+    "description": "useEffect Hook"
+  },
+  "useCallback": {
+    "prefix": "ucb",
+    "body": [
+      "const $1 = useCallback(${TM_SELECTED_TEXT:($2) => {$3\\}}, [$4]);"
+    ],
+    "description": "useCallback Hook"
+  },
+  "Declare a new state variable using State Hook": {
+    "prefix": "usf",
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"
+    ],
+    "description": "Declare a new state Variable using the State Hook. Hit Tab to apply CamelCase to function"
+  },
+}
