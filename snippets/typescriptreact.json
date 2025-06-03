@@ -67,7 +67,7 @@
   "classNames utility": {
     "prefix": "cn",
     "body": [
-      "{cn([${TM_SELECTED_TEXT/\\s/\", \"/}$1])}"
+      "{cn([${TM_SELECTED_TEXT/\\s/\", \"/g}$1])}"
     ],
     "description": "classNames utility function"
   },
